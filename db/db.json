@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "productName": "Sampoo",
+      "price": "1000",
+      "email": "test@gmail.com",
+      "id": 1
+    },
+    {
+      "productName": "Mouse",
+      "price": "20000",
+      "email": "testtt@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Didi",
+      "age": "12",
+      "address": "Kemayoran",
+      "id": 7
+    }
+  ]
+}
