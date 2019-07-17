@@ -1,10 +1,15 @@
 <template>
     <div>
         <h3>Cari User</h3>
-        <p>
-        <label for="name">Name : </label>
-        <input v-model="searchName" id="name"></p> 
+        <div class="form-group">
+            <label for="name">Name : </label>
+        <input v-model="searchName" id="name">
+        </div>
         <button v-on:click="showUser()">tampilkan user</button>
+        <div class="form-group">
+
+        </div>
+        
 
         <div v-if="result" v-for="(item, index) in user" :key="index">
             <p> User ID : {{ item.id }} </p>

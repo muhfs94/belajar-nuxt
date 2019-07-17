@@ -1,29 +1,9 @@
 <template>
   <section class="container">
-    <!-- <div>
-      <header-ini />
-      <logo-gw />
-      <h1 class="title">
-        belajar-nuxt
-      </h1>
-      <h2 class="subtitle">
-        belajar nuxt pertama kali
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div> -->
     <div>
         <input-data />
+        <br>
+        <br>
         <search-data />
     </div>
   </section>
@@ -57,40 +37,124 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Styles are taken from https://github.com/monterail/vuelidate */
+@import url("http://use.fontawesome.com/releases/v5.0.1/css/all.css");
+body {
+    width: 40%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+}
+input {
+    font-family: "Lato", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #374853;
+    line-height: 2.375rem;
+    min-height: 2.375rem;
+    position: relative;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 0.8125rem;
+    width: 100%;
+    transition: border .1s ease;
+    box-sizing: border-box;
+}
+input.error, input.error:focus {
+    border-color: #f79483;
+}
+input.valid, input.valid:focus {
+    border-color: #41B883;
+}
+input:focus {
+    border-color: #a8a8a8;
+    outline: none;
+}
+label {
+    font-size: 0.8125rem;
+    color: #4b6372;
+    margin-bottom: 0.3125rem;
+    margin-left: 0.875rem;
+    display: block;
+}
+.form-group {
+    margin-bottom: 2rem;
+}
+.error-message {
+    display: block;
+    color: #f57f6c;
+}
+h1 {
+    color: #374853;
+}
+button {
+    font-family: "Lato", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #fff;
+    min-height: 2.5rem;
+    line-height: 1.4;
+    padding: 0.5rem 1.875rem 0.625rem;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    background: #41B883;
+    border: none;
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+    outline: none;
+    vertical-align: middle;
+    transition: 0.1s background ease, 0.1s border-color ease, 0.1s color ease;
+    border-bottom: 3px solid #266d4d;
+    text-decoration: none;
+}
+button:hover, button:focus {
+    background: #349268;
+    cursor: pointer;
+}
+button:disabled {
+    background: #ccc6c6;
+    border-bottom: 3px solid #b3b1b1;
+    cursor: not-allowed;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+input[type=checkbox] {
+    visibility: hidden;
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -10%;
+    position: relative;
+    left: 5px;
+    color: #555 !important;
+    font-weight: 200;
+    letter-spacing: 1px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+
+input[type=checkbox]:before {
+    font-family: 'Font Awesome 5 Free' !important;
+    display: inline-block !important;
+    visibility: visible !important;
 }
 
-.links {
-  padding-top: 15px;
+input[type=checkbox]:before {
+    font-weight: 400;
+    content: "\f0c8";
 }
 
-.form {
-  display: inline-block;
-  align-items: left;
-  margin: 10px;
+input[type=checkbox]:checked:before {
+    font-weight: 900;
+    content: "\f14a";
+}
+
+.github-username {
+    position: relative;
+}
+
+.github-username .fa-spinner {
+    position: absolute;
+    top: 33px;
+    right: 10px;
 }
 </style>

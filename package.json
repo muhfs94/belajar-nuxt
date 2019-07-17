@@ -1,5 +1,5 @@
 {
-  "name": "belajar-nuxt",
+  "name": "crud-app",
   "version": "1.0.0",
   "description": "belajar nuxt pertama kali",
   "author": "madmedmod",
@@ -21,5 +21,15 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
-  }
+  },
+  "main": "nuxt.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madmedmod/belajar-nuxt.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madmedmod/belajar-nuxt/issues"
+  },
+  "homepage": "https://github.com/madmedmod/belajar-nuxt#readme"
 }

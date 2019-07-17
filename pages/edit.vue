@@ -28,12 +28,11 @@ export default {
     components: {
         'searchName' : searchName
     },
-    data() {
-        return {
+    data: {
             name: this.searchName,
             age: this.age,
             address: this.address,
-        }
+            
     },
     mounted() {
 

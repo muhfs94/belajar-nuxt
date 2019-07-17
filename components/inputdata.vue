@@ -1,20 +1,20 @@
 <template>
     <div>
         <h3> Form Input</h3>
-        <form @submit.prevent="onSubmit">
-            <p>
-            <label for="name">Name : </label>
-            <input v-model="name" id="name">
-            </p>
-            <label for="age">Age : </label>
-            <input v-model="age" id="age">
-            <p>
-            <label for="address">Address : </label>
-            <textarea v-model="address" id="address"></textarea>
-            </p>
-            <p>
-            <input type="submit" value="Submit">
-            </p>
+        <form @submit.prevent="onSubmit" autocomplete="off">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input v-model="name" id="name" >
+            </div>
+            <div class="form-group">
+              <label for="age">Age : </label>
+              <input v-model="age" id="age">
+            </div>
+            <div class="form-group">
+              <label for="address">Address : </label>
+              <input v-model="address" id="address"></input>
+            </div>
+            <button type="submit" value="Submit">Submit</button>
         </form>
     </div>
 </template>
@@ -55,5 +55,4 @@ export default {
 </script>
 
 <style>
-
 </style>
